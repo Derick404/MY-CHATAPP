@@ -1,0 +1,46 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: chatdb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+  
+
+  app1:
+    build: .
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: user
+      DB_PASS: pass
+      DB_NAME: chatdb
+      PORT_ID: 1  # Identifier for this instance
+
+  app2:
+    build: .
+    ports:
+      - "8081:80"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: user
+      DB_PASS: pass
+      DB_NAME: chatdb
+      PORT_ID: 2  # Identifier for this instance
+
+          # Instructions:
+          # To run the multi-instance chat application:
+       # Ensure you have Docker and Docker Compose installed.
+              #http://localhost:8080 
+              # http://localhost:8081
+              # docker-compose up --build
+              # docker-compose down -v

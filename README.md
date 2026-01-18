@@ -27,12 +27,13 @@ CHAT-APP/
 - install docker on device
 - clone the repo to individual device and run
 - docker-compose up --build
-
 - open http://localhost:8080 and http://localhost:8081
-
 - after usage u can stop container and run ..
 - docker-compose down -v
 
 - to delete container containing data
 - write message between both ports
 - application runs identically on any system that supports Docker
+<img width="1252" height="966" alt="full" src="https://github.com/user-attachments/assets/8f087691-b71f-4e68-85d9-b06f8d811475" />
+
+

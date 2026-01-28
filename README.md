@@ -34,6 +34,6 @@ CHAT-APP/
 - to delete container containing data
 - write message between both ports
 - application runs identically on any system that supports Docker
-<img width="1252" height="966" alt="full" src="https://github.com/user-attachments/assets/8f087691-b71f-4e68-85d9-b06f8d811475" />
+<img width="1224" height="866" alt="full" src="https://github.com/user-attachments/assets/8f087691-b71f-4e68-85d9-b06f8d811475" />
 
 
